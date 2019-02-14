@@ -21,6 +21,7 @@ plt.legend(loc='best')
 plt.savefig('../figs/1.5.pdf')
 plt.show()
 
+#printing Convexity Result
 print("Chord is below curve, hence not convex")
 
 
