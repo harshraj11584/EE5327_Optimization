@@ -14,6 +14,8 @@
 
 \usepackage{graphicx}
 
+\usepackage{subcaption}
+
 \usepackage[export]{adjustbox}
 
 \title{EE5327 : Optimization}
@@ -28,7 +30,7 @@
 \maketitle
 
 \begin{frame}[fragile]{Question}
-  Plot the circles 
+	Plot the circles 
 %
 \begin{equation}
 \label{eq2_1_circ}
@@ -44,8 +46,8 @@ g(\textbf{x}) = x_1 + x_2 - 9 = 0
 %
 From the graph, find
 \begin{gather*} 
-  \min_{\textbf{x}}  f(\textbf{x}) \quad \text{s.t.} \\
-  g(\textbf{x}) = x_1 + x_2 - 9 = 0
+	\min_{\textbf{x}}  f(\textbf{x}) \quad \text{s.t.} \\
+	g(\textbf{x}) = x_1 + x_2 - 9 = 0
 \end{gather*} 
 Also obtain a theoretical solution for the problem above using coordinate geometry.
 \end{frame}
@@ -70,7 +72,7 @@ From the graph, find minimum value of $f(\textbf{x})$ satisfying $g(\textbf{x}) 
 \metroset{titleformat frame=allsmallcaps}
 \begin{frame}{Graphical Approach}
 From the graph, find minimum value of $f(\textbf{x})$ satisfying $g(\textbf{x}) = 0$
-  \graphicspath{ {./images/} }
+	\graphicspath{ {./images/} }
     \includegraphics[scale=0.45,center]{2D_2}
 \end{frame}
 }
@@ -79,23 +81,31 @@ From the graph, find minimum value of $f(\textbf{x})$ satisfying $g(\textbf{x}) 
 \metroset{titleformat frame=allsmallcaps}
 \begin{frame}{Graphical Approach}
 From the graph, find minimum value of $f(\textbf{x})$ satisfying $g(\textbf{x}) = 0$
-  \graphicspath{ {./images/} }
+	\graphicspath{ {./images/} }
     \includegraphics[scale=0.45,center]{2D_3}
 \end{frame}
 }
 {
 \metroset{titleformat frame=allsmallcaps}
 \begin{frame}{Graphical Approach}
+
+
 From graph, \newline
 %
+Since the optimal point lies on the line $g(\textbf{x}) = 0$, it's coordinates satisfy the relation:
+\begin{equation}
+    x_1+x_2=9
+\end{equation}
+Using this relation in $f(\textbf{x})$, we get
 \begin{align}
 r^2 & = (x_1-8)^2 + (3- x_1)^2 \\
 &= 2 x_1^2 - 22 x_1 + 73 \\
 \Rightarrow r^2 &= \frac{\brak{(2x_1-11)}^2 + 5^2}{2}
 \end{align}
 %
-This is minimum at $x_1 = \frac{11}{2}, x_2 = \frac{7}{2}$.  
-\newline f(\boldsymbol{x})_{min} = $\frac{25}{2}$ , $r_{min} = \frac{5}{\sqrt{2}}$. 
+This is minimum at $x_1 = \frac{11}{2}$.\newline 
+To find $x_2$, we use equation (3)  \Rightarrow $x_2 = 9-x_1 =\frac{7}{2}$.  
+\newline \newline Hence,    $f(\boldsymbol{x})_{min} = \frac{25}{2}$ at $(\frac{11}{2},\frac{7}{2})$ and $r_{min} = \frac{5}{\sqrt{2}}$. 
 \end{frame}
 }
 
@@ -104,6 +114,7 @@ This is minimum at $x_1 = \frac{11}{2}, x_2 = \frac{7}{2}$.
 \begin{frame}{Another Graphical Approach}
 Plot Objective z=f(\boldsymbol{x}) and Feasible Region g(\boldsymbol{x})=0.
   \begin{figure}[h]
+  \graphicspath{ {./images/} }
 \includegraphics[scale = 0.34]{Figure_1.png}
 \end{figure}   
 \end{frame}
@@ -111,6 +122,7 @@ Plot Objective z=f(\boldsymbol{x}) and Feasible Region g(\boldsymbol{x})=0.
 \begin{frame}{Another Graphical Approach}
 From graph, find minimum z=f(\boldsymbol{x}) such that point (\boldsymbol{x},z) lies on feasible region g(\boldsymbol{x})=0.
      \begin{figure}[h]
+     \graphicspath{ {./images/} }
 \includegraphics[scale = 0.34]{Figure_2.png}
 \end{figure}
 \end{frame}
@@ -118,9 +130,10 @@ From graph, find minimum z=f(\boldsymbol{x}) such that point (\boldsymbol{x},z) 
 \begin{frame}{Another Graphical Approach}
 Finding Constraints for Solving : 
  \begin{figure}[h]
+ \graphicspath{ {./images/} }
 \includegraphics[scale = 0.2]{Figure_2.png}
 \end{figure}
-As \boldsymbol{x} lies on g(\boldsymbol{x})$ =0 $, \quad \quad $ x_1+x_2=9 $ -(i)
+As \boldsymbol{x} lies on $g(\boldsymbol{x}) =0 $, \quad \quad $ x_1+x_2=9 $ -(i)
 \newline As f(\boldsymbol{x}) is decreasing along $-\nabla$ f(\boldsymbol{x}), and f(\boldsymbol{x}) cannot decrease in any neighbourhood of (\boldsymbol{x},z) in plane, $-\nabla$ f(\boldsymbol{x}) should be perpendicular to plane g(\boldsymbol{x})=0. \quad \quad \quad $-\nabla$ $f(\boldsymbol{x})^T . $\begin{bmatrix}
            9 \\
            -9 \\
