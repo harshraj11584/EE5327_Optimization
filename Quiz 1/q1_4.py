@@ -1,5 +1,3 @@
-#Code by GVV Sharma, Novermber 12, 2018
-#Released under GNU GPL
 from cvxpy import *
 from numpy import matrix
 A = matrix([ [1.0, 3.0], [1.0, 2.0 ]])
